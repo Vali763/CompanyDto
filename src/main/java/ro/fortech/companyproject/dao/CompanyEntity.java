@@ -1,6 +1,7 @@
 package ro.fortech.companyproject.dao;
 
 import lombok.Data;
+import ro.fortech.companyproject.service.Company;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,5 +22,17 @@ public class CompanyEntity {
     private String name;
     private String cif;
 
+    public Company toPojo(){
+        Company pojo = new Company();
+        pojo.setName(name);
+        pojo.setCif(cif);
+        return pojo;
+    }
+
+    public CompanyEntity update(Company pojo){
+        this.name = pojo.getName();
+        this.cif = pojo.getCif();
+        return this;
+    }
 
 }

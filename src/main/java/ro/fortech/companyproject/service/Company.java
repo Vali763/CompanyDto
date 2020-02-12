@@ -6,6 +6,7 @@ import ro.fortech.companyproject.controller.CompanyDto;
 @Data
 public class Company {
 
+    private String name;
     private String cif;
 
     public CompanyDto toDto(){
