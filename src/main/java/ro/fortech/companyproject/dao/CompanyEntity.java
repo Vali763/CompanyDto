@@ -1,5 +1,6 @@
 package ro.fortech.companyproject.dao;
 
+
 import lombok.Data;
 import ro.fortech.companyproject.service.Company;
 
@@ -34,5 +35,4 @@ public class CompanyEntity {
         this.cif = pojo.getCif();
         return this;
     }
-
 }
